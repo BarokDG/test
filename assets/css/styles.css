@@ -1,0 +1,375 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Grid */
+#grid-container {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 100% auto;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Side Bar */
+.sidebar {
+    background-color: #32373D;
+    border-right: 1px solid rgba(100, 100, 100, 0.5);
+    height: 100%;
+    position: fixed;
+    width: 20%;
+}
+
+.sidebar button {
+    background-color: #32373D;
+    border: none;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.4);
+    color: #A97643;
+    display: block;
+    outline: none;
+    padding: 5%;
+    padding-left: 10%;
+    text-align: left;
+    width: 100%;
+}
+
+.sidebar button:hover {
+    box-shadow: inset 0 0 100px 100px #cdcdcd25;
+}
+
+.sidebar a {
+    color: black;
+    text-decoration: none !important;
+}
+
+.sidebar-small {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.heading {
+    color: white;
+    font-family: 'Merriweather', serif;
+    padding: 0;
+    margin-left: 10%;
+}
+
+.svg-div {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("../images/StockSnap_GTWPBBTRRN.jpg");
+    background-size: contain;
+    height: 25%;
+}
+
+.active {
+    color: white !important;
+}
+
+i {
+    margin-right: 6%;
+}
+
+/* Main Container */
+.main-container {
+    background-color: #F7F9FA;
+    grid-column-start: 2;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main-content {
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    padding: 2% !important;
+    text-align: justify;
+}
+
+/* Dashboard page */
+/* .dash-content {
+
+} */
+/* Charts inside dash content */
+#chart {
+    background-color: white;
+    max-width: 650px;
+    margin: 35px auto;
+}
+
+.pieChart {
+    background-color: white;
+    display: inline-block;
+    margin-left: 5%;
+    max-width: 350px;
+}
+
+.card.adminCard {
+    border: 1px solid red;
+    height: 8rem;
+}
+
+.card-title.adminTitle {
+    color: #757575;
+    font-size: 1rem;
+    width: 9rem;
+}
+
+.stat-value {
+    font-size: 1.2rem;
+    font-weight: 400;
+    position: relative;
+}
+
+p>i {
+    border-radius: 50%;
+    bottom: 80%;
+    color: white;
+    left: 80%;
+    padding: 10px;
+    position: absolute;
+}
+
+.fa-venus-mars {
+    background-color: #F5365C;
+}
+
+.fa-graduation-cap {
+    background-color: #FB6340;
+}
+
+.fa-check {
+    background-color: #FFD600;
+}
+
+.stat-value .fa-user-clock {
+    background-color: #11CDEF;
+}
+
+#radial_bar {
+    background-color: white;
+}
+
+/* Student Dashboard */
+.progress {
+    width: 75%;
+}
+
+.progress p {
+    left: 45%;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+}
+
+/* Loan Page */
+/* Search bar inside the main container */
+/* Search bar */
+.search-bar {
+    text-align: center;
+}
+
+.search-bar input {
+    border: none;
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+    outline: none;
+    padding: 1%;
+    padding-left: 2%;
+    width: 50%;
+}
+
+#gradient-button {
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+#gradient-button:hover {
+    background: linear-gradient(to left, #8e2de2, #4a00e0);
+}
+
+.delete-button {
+    border: none;
+    color: red;
+    margin: 10px auto;
+    outline: none !important;
+}
+
+/* Navbar */
+nav {
+    border-bottom: 1px solid #cdcdcd;
+    display: none !important;
+}
+
+.ribbon {
+    align-items: center;
+    display: flex;
+    vertical-align: center;
+    width: fit-content;
+}
+
+.navbar-brand {
+    display: none;
+    font-size: 25px;
+}
+
+.navbar-img {
+    width: 3%;
+}
+
+.menu-btn {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    outline: none !important;
+    width: 50px;
+}
+
+/* Table */
+thead {
+    background-color: white;
+    border-bottom: 2px solid red;
+}
+
+.table-responsive {
+    display: table !important;
+}
+
+th {
+    border: none !important;
+    color: #757575;
+    font-weight: lighter;
+}
+
+tr {
+    background-color: white;
+}
+
+.table-bordered td {
+    border: 1px solid white;
+}
+
+
+/* Responsiveness */
+@media screen and (max-width: 1000px) {
+    #grid-container {
+        grid-column-gap: 0;
+        grid-template-columns: 12% auto;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar-small {
+        background-color: #32373D;
+        display: block;
+        height: 100%;
+        position: fixed;
+        width: 12%;
+    }
+
+    .sidebar-small .heading {
+        font-size: 15px;
+        font-weight: bold;
+        padding: 1em !important;
+        text-align: justify;
+    }
+
+    .side-button {
+        background-color: transparent;
+        border: 1px solid rgba(100, 100, 100);
+        border-left: none;
+        border-right: none;
+        color: #A97643;
+        cursor: pointer;
+        outline: none !important;
+        padding: 0;
+        height: 12%;
+        width: 100%;
+    }
+
+    .side-button:hover {
+        box-shadow: inset 0 0 100px 100px rgba(150, 150, 150, 0.302);
+    }
+
+    .fa-2x {
+        display: block !important;
+    }
+
+    .heading {
+        color: #A97643;
+        margin: 0;
+    }
+
+    i {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #grid-container {
+        display: block;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .sidebar-small {
+        width: 30%;
+        z-index: 1;
+    }
+
+    .sidebar-small-show {
+        height: 100%;
+        left: 0;
+    }
+
+    .sidebar-small-hide {
+        left: -30% !important;
+    }
+
+    .sidebar-small .heading {
+        font-size: 25px;
+    }
+
+    .side-button {
+        width: 100%;
+    }
+
+    nav {
+        display: block !important;
+    }
+
+    .navbar-brand {
+        display: block;
+    }
+
+    .progress {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .sidebar-small {
+        width: 50%;
+    }
+
+    .sidebar-small-hide {
+        left: -50% !important;
+    }
+
+    .table-responsive {
+        display: block !important;
+    }
+
+    th:first-child,
+    td:first-child {
+        background-color: blueviolet;
+        color: white;
+        left: 0px !important;
+        position: sticky !important;
+
+    }
+}
